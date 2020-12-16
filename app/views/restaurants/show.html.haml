@@ -1,0 +1,8 @@
+%h1="Restaurantsshow"
+=@restaurant.name
+%br
+=@restaurant.address
+
+=link_to "Go to TOP", restaurants_path
+=link_to "Go to EDIT", edit_restaurant_path(@restaurant)
+=link_to "Go to DELETE", restaurant_path(@restaurant), method: :delete, data: {confirm: "削除しますか？"}

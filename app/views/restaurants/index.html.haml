@@ -1,0 +1,13 @@
+%h1 Index
+-# -index = 1
+-# -@restaurants.each do |restaurant|
+-#   =index
+-#   =link_to restaurant.name, restaurant_path(restaurant.id)
+-#   %br
+-#   -index += 1
+-@restaurants.each_with_index do |restaurant, index|
+ #{index + 1}.
+ =link_to restaurant.name, restaurant_path(restaurant)
+ %br
+
+=link_to "新規登録", new_restaurant_path
